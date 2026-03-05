@@ -1,0 +1,99 @@
+:root {
+  /* Oh-my-zsh halflife-like color scheme */
+  --bg-color: #222222;
+  --text-color: #cccccc;
+  --accent-color: #00ff00; /* Green */
+  --error-color: #ff0000; /* Red */
+  --warning-color: #ffff00; /* Yellow */
+  --info-color: #0000ff; /* Blue */
+  --prompt-user: #76ee00; /* Light green */
+  --prompt-path: #1e90ff; /* Dodger blue */
+  --cursor-color: #ffffff;
+  --terminal-font: 'Courier New', Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--terminal-font);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-color);
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--prompt-path);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--prompt-user);
+}
+
+.terminal-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.prompt::before {
+  content: "➜ ";
+  color: var(--prompt-user);
+}
+
+.prompt-path {
+  color: var(--prompt-path);
+}
+
+.prompt-cmd {
+  color: var(--text-color);
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--accent-color);
+  margin: 1rem 0;
+}
+
+.markdown-content pre {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  border-left: 3px solid var(--accent-color);
+}
+
+.markdown-content code {
+  font-family: var(--terminal-font);
+  background-color: #1a1a1a;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid var(--prompt-path);
+  margin-left: 0;
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .terminal-container {
+    padding: 10px;
+  }
+}
